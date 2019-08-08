@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Anton&display=swap");
+
+@keyframes slide-left {
+  from {
+    margin-left: -50%;
+    width: 100%;
+    opacity: 0.1;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 300%;
+    opacity: 1;
+  }
+}
+
+.z {
+  animation: slide-left 3s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  5% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  15% {
+    transform: translateY(0);
+    padding-bottom: 5px;
+  }
+  30% {
+    transform: translateY(-50%);
+  }
+  40% {
+    transform: translateY(0%);
+    padding-bottom: 6px;
+  }
+  50% {
+    transform: translateY(-30%);
+  }
+  70% {
+    transform: translateY(0%);
+    padding-bottom: 7px;
+  }
+  80% {
+    transform: translateY(-15%);
+  }
+  97% {
+    transform: translateY(0%);
+    padding-bottom: 9px;
+  }
+
+  100% {
+    transform: translateY(0);
+    padding-bottom: 9px;
+    opacity: 1;
+  }
+}
+
+.bounce {
+  animation: bounce 3s;
+}
+
+@keyframes hinge {
+  from {
+    transform: rotate(-180deg) translateY(0);
+    opacity: 0.1;
+    transform-origin: top right;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.hinge {
+  animation: hinge 3s;
+}
+
+body {
+  overflow: hidden;
+  font-family: "Anton", sans-serif;
+  font-size: 5rem;
+  text-align: center;
+}
+
+.ztm {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 40vw;
+  margin: 0 auto;
+  overflow: hidden;
+  font-size: 5rem;
+}
+
+.footer {
+  font-size: 1.5rem;
+  width: 102vw;
+  position: absolute;
+  left: -5px;
+  bottom: 0;
+  background: radial-gradient(ellipse at top, transparent, #1c3b65),
+    radial-gradient(ellipse at bottom, transparent, #3d71b2);
+  color: whitesmoke;
+}
+
+.ztm-img {
+  position: relative;
+  top: 3px;
+}
