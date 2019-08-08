@@ -1,113 +1,211 @@
-@import url("https://fonts.googleapis.com/css?family=Anton&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Anton|Dancing+Script&display=swap');
 
-@keyframes slide-left {
-  from {
-    margin-left: -50%;
-    width: 100%;
-    opacity: 0.1;
-  }
+@keyframes slideIn {
+	from {
+		margin-left: -50%;
+		opacity: 0.1;
+		transform: scale(2);
+	}
 
-  to {
-    margin-left: 0%;
-    width: 300%;
-    opacity: 1;
-  }
+	to {
+		margin-left: 0;
+		opacity: 1;
+		transform: scale(1);
+	}
 }
 
-.z {
-  animation: slide-left 3s;
+.slideIn {
+	animation: slideIn 3s;
+	color: yellow;
 }
 
 @keyframes bounce {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  5% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  15% {
-    transform: translateY(0);
-    padding-bottom: 5px;
-  }
-  30% {
-    transform: translateY(-50%);
-  }
-  40% {
-    transform: translateY(0%);
-    padding-bottom: 6px;
-  }
-  50% {
-    transform: translateY(-30%);
-  }
-  70% {
-    transform: translateY(0%);
-    padding-bottom: 7px;
-  }
-  80% {
-    transform: translateY(-15%);
-  }
-  97% {
-    transform: translateY(0%);
-    padding-bottom: 9px;
-  }
+	0% {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+	5% {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+	15% {
+		transform: translateY(0);
+		padding-bottom: 5px;
+	}
+	30% {
+		transform: translateY(-50%);
+	}
+	40% {
+		transform: translateY(0%);
+		padding-bottom: 6px;
+	}
+	50% {
+		transform: translateY(-30%);
+	}
+	70% {
+		transform: translateY(0%);
+		padding-bottom: 7px;
+	}
+	80% {
+		transform: translateY(-15%);
+	}
+	97% {
+		transform: translateY(0%);
+		padding-bottom: 9px;
+	}
 
-  100% {
-    transform: translateY(0);
-    padding-bottom: 9px;
-    opacity: 1;
-  }
+	100% {
+		transform: translateY(0);
+		padding-bottom: 9px;
+		opacity: 1;
+	}
 }
 
 .bounce {
-  animation: bounce 3s;
+	animation: bounce 3s;
 }
 
 @keyframes hinge {
-  from {
-    transform: rotate(-180deg) translateY(0);
-    opacity: 0.1;
-    transform-origin: top right;
-  }
+	from {
+		transform: rotate(-180deg) translateY(0);
+		opacity: 0.1;
+		transform-origin: top right;
+	}
 
-  to {
-    opacity: 1;
-  }
+	to {
+		opacity: 1;
+	}
 }
 
 .hinge {
-  animation: hinge 3s;
+	animation: hinge 3s;
+	color: yellow;
 }
 
 body {
-  overflow: hidden;
-  font-family: "Anton", sans-serif;
-  font-size: 5rem;
-  text-align: center;
+	margin: 0;
+	overflow: hidden;
+	font-family: 'Anton', sans-serif;
+	font-size: 5rem;
+	text-align: center;
+	display: grid;
+	align-content: center;
+	align-items: center;
+	min-height: 98vh;
+	background: radial-gradient(ellipse at top, transparent, #1c3b65),
+		radial-gradient(ellipse at bottom, transparent, #3d71b2);
 }
 
 .ztm {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 40vw;
-  margin: 0 auto;
-  overflow: hidden;
-  font-size: 5rem;
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	width: 100%;
+	left: 25vw;
+	margin-left: -25vw;
+	top: 35%;
+	margin-top: -35px;
+}
+
+@keyframes smoky {
+	60% {
+		text-shadow: 0 0 40px whitesmoke;
+	}
+	to {
+		transform: translate3d(15rem, -8rem, 0) rotate(-40deg) skewX(70deg) scale(1.5);
+		text-shadow: 0 0 20px whitesmoke;
+		opacity: 0;
+	}
+}
+
+@keyframes smoky-mirror {
+	60% {
+		text-shadow: 0 0 40px whitesmoke;
+	}
+	to {
+		transform: translate3d(18rem, -8rem, 0) rotate(-40deg) skewX(-70deg) scale(2);
+		text-shadow: 0 0 20px whitesmoke;
+		opacity: 0;
+	}
+}
+
+.word {
+	margin: 0 10px 0 10px;
+	animation: smoky 3s 3s both;
+}
+
+.word:nth-child(even) {
+	animation-name: smoky-mirror;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	25% {
+		opacity: 0.25;
+	}
+
+	50% {
+		opacity: 0.5;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.letter {
+	font-size: 7rem;
+	animation: fadeIn 0.5s 5s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+	color: yellow;
+	text-shadow: #020202 3px 5px 0, rgb(44, 44, 44) 4px 6px 3px, rgb(0, 0, 0) 8px 11px 10px;
+	background-clip: text;
+}
+
+.family {
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	width: 50vw;
+	left: 50vw;
+	margin-left: -25vw;
+	top: 50%;
+	margin-top: -50px;
+	animation: fadeIn 0.5s 5s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+	text-shadow: #e7e7e7 3px 5px 0, #999 4px 6px 3px, #ccc 8px 11px 10px;
+	background-clip: text;
 }
 
 .footer {
-  font-size: 1.5rem;
-  width: 102vw;
-  position: absolute;
-  left: -5px;
-  bottom: 0;
-  background: radial-gradient(ellipse at top, transparent, #1c3b65),
-    radial-gradient(ellipse at bottom, transparent, #3d71b2);
-  color: whitesmoke;
+	font-size: 1.5rem;
+	width: 102vw;
+	position: absolute;
+	left: -5px;
+	bottom: 0px;
+	text-shadow: 1px 1px 0px rgb(58, 58, 58), -1px 1px 0px rgb(58, 58, 58), -1px -1px 0px rgb(58, 58, 58),
+		1px -1px 0px rgb(58, 58, 58), 0px 2px 2px rgb(58, 58, 58);
+	background: radial-gradient(ellipse at top, transparent, #1c3b65),
+		radial-gradient(ellipse at bottom, transparent, #3d71b2);
+	filter: drop-shadow(0px -1px 0px rgb(0, 0, 0));
+	color: whitesmoke;
+	font-family: 'Dancing Script', sans-serif;
+}
+
+.heart {
+	color: red;
+	filter: drop-shadow(0.1px 0.1px 0px #333) drop-shadow(0.1px -0.1px 0px #333) drop-shadow(0px 1px 1px rgb(0, 0, 0));
+	transition: all 1s linear;
+	transform: scale(1.1);
 }
 
 .ztm-img {
-  position: relative;
-  top: 3px;
+	position: relative;
+	top: 4px;
+	filter: drop-shadow(1px 1px 0px rgb(0, 0, 0)) drop-shadow(0px 1px 1px rgb(0, 0, 0));
 }
