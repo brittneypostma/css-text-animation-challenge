@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="50mm"
+   height="50mm"
+   viewBox="0 0 50 50"
+   version="1.1"
+   id="svg1509"
+   inkscape:export-filename="C:\Users\britt\Desktop\Coding-projects\CHALLENGES\css-text-animation-challenge\heart.png"
+   inkscape:export-xdpi="20.59"
+   inkscape:export-ydpi="20.59"
+   sodipodi:docname="heart.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <defs
+     id="defs1503" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-64.285714"
+     inkscape:cy="560"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:pagecheckerboard="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata1506">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-247)">
+    <path
+       style="opacity:1;fill:#e2264d;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 22.565629,292.281 c -0.250041,-0.29926 -1.31067,-1.03148 -2.35692,-1.6265 -2.412768,-1.37224 -9.139004,-8.20966 -11.1348067,-11.31885 -0.8366325,-1.30343 -1.6556943,-2.53386 -1.8200966,-2.73443 -0.6814456,-0.83121 -2.3137329,-4.567 -3.1859981,-7.29181 -0.700675,-2.18871 -0.9349297,-3.70703 -0.9384316,-6.08314 -0.00584,-3.95313 0.4337366,-5.05082 3.3814868,-8.44227 2.3079581,-2.65552 4.2267812,-3.52186 7.8004402,-3.52186 3.627905,0 5.2742,0.77381 8.291128,3.89694 1.490862,1.5433 2.506272,2.30113 3.0834,2.30113 0.576267,0 1.565876,-0.73652 2.995363,-2.229 1.174221,-1.22593 2.465049,-2.38144 2.868498,-2.56783 0.403634,-0.18619 1.146146,-0.57528 1.650473,-0.86462 0.587325,-0.33711 1.973133,-0.52764 3.856814,-0.53132 2.367859,-0.004 3.244917,0.15693 4.507728,0.82824 1.94088,1.03196 4.406605,3.36221 5.097573,4.81758 0.285677,0.60153 0.754493,1.5039 1.042012,2.00522 0.91183,1.58985 0.699324,7.05648 -0.405477,10.43542 -0.885412,2.70769 -2.528388,6.44042 -3.189868,7.24727 -0.164646,0.20031 -0.983954,1.43099 -1.821201,2.73441 -1.249974,1.94588 -8.284738,9.74313 -9.145393,10.13661 -0.57381,0.26261 -3.83611,2.4654 -4.277835,2.88875 -0.718369,0.68856 -5.709903,0.62516 -6.298702,-0.08 z"
+       id="path1492"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

@@ -1,5 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Anton|Dancing+Script&display=swap');
+@font-face {
+	font-family: 'Anton';
+	font-weight: 400;
+	font-style: normal;
+	src: url('./Anton.ttf') format('truetype');
+	font-display: swap;
+}
 
+/* @import url('https://fonts.googleapis.com/css?family=Anton&display=swap'); */
+
+/*Slide In Animation*/
 @keyframes slideIn {
 	from {
 		margin-left: -50%;
@@ -19,6 +28,7 @@
 	color: yellow;
 }
 
+/*Bounce Animation */
 @keyframes bounce {
 	0% {
 		transform: translateY(-100%);
@@ -65,6 +75,7 @@
 	animation: bounce 3s;
 }
 
+/*Hinge animation */
 @keyframes hinge {
 	from {
 		transform: rotate(-180deg) translateY(0);
@@ -82,18 +93,79 @@
 	color: yellow;
 }
 
+/*Body of Page*/
 body {
 	margin: 0;
 	overflow: hidden;
 	font-family: 'Anton', sans-serif;
 	font-size: 5rem;
 	text-align: center;
-	display: grid;
-	align-content: center;
-	align-items: center;
 	min-height: 98vh;
 	background: radial-gradient(ellipse at top, transparent, #1c3b65),
 		radial-gradient(ellipse at bottom, transparent, #3d71b2);
+}
+
+.span {
+	font: 700 7rem/1 'Anton', sans-serif;
+	letter-spacing: 5px;
+	padding: 0.25em 0 0.325em;
+	margin: 0 auto;
+	opacity: 0;
+	filter: drop-shadow(0px -2px 0px black) drop-shadow(0px 2px 0px black) drop-shadow(2px 0px 0px black)
+		drop-shadow(-2px 0px 0px black) drop-shadow(0px 5px 5px black);
+	/* Clip Background Image */
+	background-position: 50% 50%;
+	background: url(./bg.jpg) repeat-y;
+	-webkit-background-clip: text;
+	background-clip: text;
+
+	/* Animate Background Image */
+
+	-webkit-text-fill-color: transparent;
+	animation: bgMove 20s 6s linear, fadeIn 0.5s 5s;
+	animation-fill-mode: forwards;
+	/* Activate hardware acceleration for smoother animations */
+
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+}
+
+/* Animate Background Image */
+
+@keyframes bgMove {
+	0% {
+		background-position: 0% 0%;
+	}
+	10% {
+		background-position: 25% 50%;
+	}
+	20% {
+		background-position: 100% 70%;
+	}
+	30% {
+		background-position: 25% 30%;
+	}
+	40% {
+		background-position: 100% 50%;
+	}
+	50% {
+		background-position: 25% 70%;
+	}
+	60% {
+		background-position: 100% 30%;
+	}
+	70% {
+		background-position: 25% 50%;
+	}
+	80% {
+		background-position: 100% 70%;
+	}
+	90% {
+		background-position: 25% 30%;
+	}
+	100% {
+		background-position: 40% 30%;
+	}
 }
 
 .ztm {
@@ -101,10 +173,10 @@ body {
 	justify-content: center;
 	position: absolute;
 	width: 100%;
-	left: 25vw;
-	margin-left: -25vw;
-	top: 35%;
-	margin-top: -35px;
+	left: 50vw;
+	margin-left: -50vw;
+	top: 30%;
+	margin-top: -30px;
 }
 
 @keyframes smoky {
@@ -156,17 +228,17 @@ body {
 	}
 }
 
-.letter {
+/* .letter {
 	font-size: 7rem;
 	animation: fadeIn 0.5s 5s;
 	animation-fill-mode: forwards;
 	opacity: 0;
 	color: yellow;
-	text-shadow: #020202 3px 5px 0, rgb(44, 44, 44) 4px 6px 3px, rgb(0, 0, 0) 8px 11px 10px;
+	text-shadow: #020202 1px 2px 0, rgb(44, 44, 44) 2px 4px 3px, rgb(0, 0, 0) 3px 5px 5px;
 	background-clip: text;
-}
+} */
 
-.family {
+/* .family {
 	height: 100px;
 	width: 100px;
 	position: absolute;
@@ -178,34 +250,188 @@ body {
 	animation: fadeIn 0.5s 5s;
 	animation-fill-mode: forwards;
 	opacity: 0;
-	text-shadow: #e7e7e7 3px 5px 0, #999 4px 6px 3px, #ccc 8px 11px 10px;
+	text-shadow: #e7e7e7 1px 2px 0, #999 2px 4px 3px, #ccc 3px 5px 5px;
 	background-clip: text;
-}
+} */
 
 .footer {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	align-content: center;
+	align-items: center;
+	height: 7vh;
 	font-size: 1.5rem;
-	width: 102vw;
+	width: 100%;
 	position: absolute;
-	left: -5px;
 	bottom: 0px;
-	text-shadow: 1px 1px 0px rgb(58, 58, 58), -1px 1px 0px rgb(58, 58, 58), -1px -1px 0px rgb(58, 58, 58),
-		1px -1px 0px rgb(58, 58, 58), 0px 2px 2px rgb(58, 58, 58);
+	text-shadow: 1px 1px 0px black, -1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black, 0px 2px 2px black;
 	background: radial-gradient(ellipse at top, transparent, #1c3b65),
 		radial-gradient(ellipse at bottom, transparent, #3d71b2);
-	filter: drop-shadow(0px -1px 0px rgb(0, 0, 0));
+	filter: drop-shadow(0px -1px 0px black);
 	color: whitesmoke;
-	font-family: 'Dancing Script', sans-serif;
+	font-family: 'Anton', sans-serif;
+}
+
+.footer-text {
+	transition: all 1s ease;
+	position: absolute;
+	margin-left: 20px;
 }
 
 .heart {
-	color: red;
-	filter: drop-shadow(0.1px 0.1px 0px #333) drop-shadow(0.1px -0.1px 0px #333) drop-shadow(0px 1px 1px rgb(0, 0, 0));
-	transition: all 1s linear;
-	transform: scale(1.1);
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	filter: drop-shadow(0px -1px 0px black) drop-shadow(0px 1px 0px black) drop-shadow(1px 0px 0px black)
+		drop-shadow(-1px 0px 0px black);
+	transform: translate(-50%, -50%);
+	background-color: #e2264d;
+	background: url('https://cssanimation.rocks/images/posts/steps/heart.png') no-repeat;
+	background-position: 0 0;
+	cursor: pointer;
+	animation: fave-heart 1s 0.2s steps(28);
+	z-index: 1;
+}
+
+.top-heart {
+	position: relative;
+	top: 33%;
+}
+
+@keyframes fave-heart {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: -2800px 0;
+	}
+}
+
+.heart:hover {
+	background-position: -2800px 0;
+	transition: background 1s steps(28);
 }
 
 .ztm-img {
+	margin-left: 15px;
+	font-family: 'Anton', sans-serif;
+}
+
+.social {
+	justify-self: flex-end;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: space-between;
+	text-align: right;
 	position: relative;
-	top: 4px;
-	filter: drop-shadow(1px 1px 0px rgb(0, 0, 0)) drop-shadow(0px 1px 1px rgb(0, 0, 0));
+	right: 20px;
+	grid-column: 2/-1;
+	filter: drop-shadow(0px -1px 0px black);
+}
+.github {
+	transition: all 0.2s linear;
+	width: 40px;
+	top: 2px;
+	position: relative;
+}
+
+.github:hover {
+	transform: rotate(1turn);
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+svg {
+	position: relative;
+	top: 2px;
+	width: 35px;
+	stroke: #fff;
+	stroke-width: 20;
+	fill: none;
+}
+#tw {
+	stroke-dasharray: 300, 0, 3000;
+}
+#st {
+	stroke-dasharray: 0, 0, 2300;
+}
+#fa {
+	stroke-dasharray: 0, 0, 2900;
+}
+#co {
+	stroke-dasharray: 300, 0, 3000;
+}
+#px {
+	stroke-dasharray: 3200, 0, 3000;
+}
+
+svg:hover #tw {
+	animation: tw 0.7s;
+}
+svg:hover #st {
+	animation: st 0.7s;
+}
+svg:hover #fa {
+	animation: fa 0.7s;
+}
+svg:hover #co {
+	animation: co 0.7s;
+}
+svg:hover #px {
+	animation: px 0.7s;
+}
+
+@keyframes tw {
+	10% {
+		stroke-dasharray: 300, 500, 3000;
+	}
+	100% {
+		stroke-dasharray: 3300, 500, 3000;
+	}
+}
+@keyframes st {
+	10% {
+		stroke-dasharray: 0, 500, 2300;
+	}
+	100% {
+		stroke-dasharray: 2300, 500, 2300;
+	}
+}
+@keyframes fa {
+	10% {
+		stroke-dasharray: 0, 500, 2900;
+	}
+	100% {
+		stroke-dasharray: 2900, 500, 2900;
+	}
+}
+@keyframes co {
+	10% {
+		stroke-dasharray: 300, 500, 3000;
+	}
+	100% {
+		stroke-dasharray: 2300, 500, 3000;
+	}
+}
+@keyframes px {
+	10% {
+		stroke-dasharray: 3200, 500, 3000;
+	}
+	100% {
+		stroke-dasharray: 6200, 500, 3000;
+	}
+}
+
+@media only screen and (max-width: 645px) {
+	.footer-text {
+		display: none;
+	}
+	.social {
+		grid-column: 2/3;
+	}
 }
